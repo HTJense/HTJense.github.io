@@ -94,10 +94,35 @@
 <!-- First entry -->
 
 <tr><td valign="top">
+	<!-- INSTALLATION -->
+	<div align="center"><h1>pyWMAP</h1></div>
 	<div align="justify">
-		<p>pyWMAP is a new python implementation of the original Fortran WMAP v5 likelihood.</p>
+		<p><code>pyWMAP</code> is a new python implementation of the original Fortran WMAP v5 likelihood. It is designed to work with the <a href="https://cobaya.readthedocs.io/">cobaya</a> sampling software while replicating as much as possible the original likelihood's behaviour under similar settings.</p>
 		
-		<p>You can download pyWMAP <a href="https://github.com/HTJense/pyWMAP">here</a>.</p>
+		<p><code>pyWMAP</code> can derive the cosmological parameters and Sunyaev-Zel'dovich effect intensity from the original WMAP temperature and high-l polarization data.</p>
+		
+		<p>You can download <code>pyWMAP</code> <a href="https://github.com/HTJense/pyWMAP">here</a>.</p>
+	</div>
+	
+	<!-- INSTALLATION -->
+	<div align="center"><h1>Installation</h1></div>
+	<div align="justify">
+		<p>To download and install the likelihood, see the following example commands:</p>
+		<pre><code>	~$ git clone https://github.com/HTJense/pyWMAP.git
+	~$ cd pyWMAP
+	~$ pip install -e .
+	~$ cobaya-install wmaplike.WMAPLike</code></pre>
+		<p>The first two commands will download and install <code>pyWMAP</code> and navigate to the newly created directory. Then we install the package dependencies using <code>pip</code>, and finally we install the likelihood with <code>cobaya</code>. This last command should download the WMAP v5 data from the NASA LAMBDA archives. Note that this does not download the SZ template included in WMAP, but the likelihood will check if the template exists and download it at a later point if it needs it.</p>
+		
+		<p>If for any reason either of the last two commands does not work, you can alternatively invoke <code>pip</code> and <code>cobaya</code> from python with for example:</p>
+		<pre><code>	~$ python3 -m pip install -e .
+	~$ python3 -m cobaya install wmaplike.WMAPLike</pre></code>
+		
+		<p>You can afterwards test <code>pyWMAP</code> by running</p>
+		<pre><code> ~$ cobaya-run eval_wmap.yaml</code></pre>
+		<p>Which should run without errors.</p>
+		
+		<p>Included in the git repo is a <code>test_wmap.py</code> script that can be run to evaluate the different components of the likelihood and check to see if any of them disagrees with the original WMAP v5 likelihood.</p>
 	</div>
 </td></tr>
 
