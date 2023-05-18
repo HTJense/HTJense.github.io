@@ -1,0 +1,62 @@
+@media screen {
+	body {
+		margin: 0px;
+		background-color: #10101F;
+	}
+	font {
+		font-family: "Helvetica";
+		font-size: 14px;
+	}
+	.layout {
+		width: 75%;
+		background-color: #FFFFF0;
+		border-left: 1px solid #666;
+		border-right: 1px solid #666;
+		padding-top: 60px;
+		padding-bottom: 600px;
+		font-size: 15px;
+	}
+	.lcol {
+		float: left;
+		width: 25%;
+	}
+	.rcol {
+		float: right;
+		width: 25%;
+	}
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.tooltip {
+		position: relative;
+		display: inline-block;
+		border-bottom: 1px dotted black;
+	}
+
+	.tooltip .tttext {
+		visibility: hidden;
+		width: 120px;
+		background-color: black;
+		color: #fff;
+		text-align: center;
+		padding: 5px 0;
+		border-radius: 6px;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.tooltip:hover .tttext {
+		visibility: visible;
+	}
+	
+	.caption {
+		font-size: 19px;
+		font-weight: bold;
+	}
+	
+	.linkbar {
+		font-size: 11px;
+	}
+}
