@@ -1,7 +1,7 @@
 @media screen {
 	body {
 		margin: 0px;
-		background-color: #10101F;
+		background-color: #101030;
 	}
 	font {
 		font-family: "Helvetica";
@@ -9,12 +9,35 @@
 	}
 	.layout {
 		width: 75%;
-		background-color: #FFFFF0;
+		background-color: #FFFFD0;
 		border-left: 1px solid #666;
 		border-right: 1px solid #666;
 		padding-top: 60px;
 		padding-bottom: 600px;
 		font-size: 15px;
+	}
+	.main {
+		width: 80%;
+		
+		border-left: 0px solid #666;
+		border-right: 0px solid #666;
+		padding: 5px;
+		border-spacing: 0px;
+	}
+	.topbar {
+		width: 100%;
+		background-color: #FFCC00;
+		
+		border: 2px solid #000000;
+		padding: 0px;
+		border-spacing: 0px;
+	}
+	.topbar-entry {
+		width: 100%;
+		background-color: #000000;
+		border: 0px;
+		padding: 0px;
+		border-spacing: 1px;
 	}
 	.lcol {
 		float: left;
@@ -39,7 +62,7 @@
 		visibility: hidden;
 		width: 120px;
 		background-color: black;
-		color: #fff;
+		color: #ffffff;
 		text-align: center;
 		padding: 5px 0;
 		border-radius: 6px;
